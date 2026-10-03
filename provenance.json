@@ -1,0 +1,393 @@
+{
+  "repository": "https://github.com/Inq8/CAmod",
+  "commit": "b67e287461c4e1086a3ba46d8c0dcb1bb4dd6748",
+  "units": [
+    {
+      "id": "n1",
+      "name": "Mini-Gunner",
+      "ko": "소총병",
+      "group": "infantry",
+      "role": "기본 보병 처리",
+      "palette": "temperattd.pal",
+      "files": [
+        "n1.shp"
+      ],
+      "defaultMode": "stand"
+    },
+    {
+      "id": "n2",
+      "name": "Grenadier",
+      "ko": "수류탄병",
+      "group": "infantry",
+      "role": "밀집 적에게 범위 공격",
+      "palette": "temperattd.pal",
+      "files": [
+        "n2.shp"
+      ],
+      "defaultMode": "stand"
+    },
+    {
+      "id": "n3",
+      "name": "Rocket Soldier",
+      "ko": "로켓 보병",
+      "group": "infantry",
+      "role": "장갑·공중 대응",
+      "palette": "temperattd.pal",
+      "files": [
+        "n3.shp"
+      ],
+      "defaultMode": "stand"
+    },
+    {
+      "id": "n4",
+      "name": "Nod Flamethrower",
+      "ko": "화염방사병",
+      "group": "infantry",
+      "role": "근거리 무리 처리",
+      "palette": "temperattd.pal",
+      "files": [
+        "n4.shp"
+      ],
+      "defaultMode": "stand"
+    },
+    {
+      "id": "n5",
+      "name": "Chemical Warrior",
+      "ko": "화학병",
+      "group": "infantry",
+      "role": "지속 피해 역할",
+      "palette": "temperattd.pal",
+      "files": [
+        "n5.shp"
+      ],
+      "defaultMode": "stand"
+    },
+    {
+      "id": "n6",
+      "name": "Engineer",
+      "ko": "엔지니어",
+      "group": "infantry",
+      "role": "수리·지원 역할",
+      "palette": "temperattd.pal",
+      "files": [
+        "n6.shp"
+      ],
+      "defaultMode": "stand"
+    },
+    {
+      "id": "rmbo",
+      "name": "Commando",
+      "ko": "코만도",
+      "group": "infantry",
+      "role": "강력한 단일 표적",
+      "palette": "temperattd.pal",
+      "files": [
+        "rmbo.shp"
+      ],
+      "defaultMode": "stand"
+    },
+    {
+      "id": "shok",
+      "name": "Shock Trooper",
+      "ko": "쇼크 트루퍼",
+      "group": "infantry",
+      "role": "전기 공격 역할",
+      "palette": "temperattd.pal",
+      "files": [
+        "shok.shp"
+      ],
+      "defaultMode": "stand"
+    },
+    {
+      "id": "hmmv",
+      "name": "Hum-Vee",
+      "ko": "험비",
+      "group": "vehicles",
+      "role": "저비용 초반 방어",
+      "palette": "temperattd.pal",
+      "files": [
+        "hmmv.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "bggy",
+      "name": "Buggy",
+      "ko": "버기",
+      "group": "vehicles",
+      "role": "빠른 기관총 지원",
+      "palette": "temperattd.pal",
+      "files": [
+        "bggy.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "bike",
+      "name": "Recon Bike",
+      "ko": "정찰 바이크",
+      "group": "vehicles",
+      "role": "기동 대장갑 지원",
+      "palette": "temperattd.pal",
+      "files": [
+        "bike.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "ltnk",
+      "name": "Light Tank",
+      "ko": "경전차",
+      "group": "vehicles",
+      "role": "초반 대장갑",
+      "palette": "temperattd.pal",
+      "files": [
+        "ltnk.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "mtnk",
+      "name": "Battle Tank",
+      "ko": "배틀 탱크",
+      "group": "vehicles",
+      "role": "중반 주력 화력",
+      "palette": "temperattd.pal",
+      "files": [
+        "mtnk.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "htnk",
+      "name": "Mammoth Tank",
+      "ko": "매머드 탱크",
+      "group": "vehicles",
+      "role": "후반 중장갑 방어",
+      "palette": "temperattd.pal",
+      "files": [
+        "htnk.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "msam",
+      "name": "MLRS",
+      "ko": "다연장 로켓",
+      "group": "vehicles",
+      "role": "다연장 범위 화력",
+      "palette": "temperattd.pal",
+      "files": [
+        "msam.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "mlrs",
+      "name": "SSM Launcher",
+      "ko": "지대지 미사일",
+      "group": "vehicles",
+      "role": "장거리 포격",
+      "palette": "temperattd.pal",
+      "files": [
+        "mlrs.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "ftnk",
+      "name": "Flame Tank",
+      "ko": "화염 전차",
+      "group": "vehicles",
+      "role": "근거리 범위 방어",
+      "palette": "temperattd.pal",
+      "files": [
+        "ftnk.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "ttnk",
+      "name": "Tesla Tank",
+      "ko": "테슬라 탱크",
+      "group": "vehicles",
+      "role": "전기 화력",
+      "palette": "temperat.pal",
+      "files": [
+        "ttnk2.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "howi",
+      "name": "Howitzer",
+      "ko": "곡사포",
+      "group": "vehicles",
+      "role": "후방 장거리 포격",
+      "palette": "temperattd.pal",
+      "files": [
+        "howi.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "apoc",
+      "name": "Apocalypse Tank",
+      "ko": "아포칼립스 탱크",
+      "group": "vehicles",
+      "role": "최종 중전차",
+      "palette": "temperat.pal",
+      "files": [
+        "apoc.shp",
+        "apoctur.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "gtwr",
+      "name": "Guard Tower",
+      "ko": "가드 타워",
+      "group": "structures",
+      "role": "기본 고정 방어",
+      "palette": "temperattd.pal",
+      "files": [
+        "gtwr.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "atwr",
+      "name": "Advanced Guard Tower",
+      "ko": "고급 가드 타워",
+      "group": "structures",
+      "role": "중후반 복합 방어",
+      "palette": "temperattd.pal",
+      "files": [
+        "atwr.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "obli",
+      "name": "Obelisk of Light",
+      "ko": "오벨리스크",
+      "group": "structures",
+      "role": "강력한 단일 표적",
+      "palette": "temperattd.pal",
+      "files": [
+        "obli.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "nsam",
+      "name": "SAM Site",
+      "ko": "SAM 방공탑",
+      "group": "structures",
+      "role": "전용 대공 방어",
+      "palette": "temperattd.pal",
+      "files": [
+        "nsam.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "pyle",
+      "name": "GDI Barracks",
+      "ko": "GDI 막사",
+      "group": "structures",
+      "role": "보병 해금 건물",
+      "palette": "temperattd.pal",
+      "files": [
+        "pyle.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "hand",
+      "name": "Hand of Nod",
+      "ko": "핸드 오브 노드",
+      "group": "structures",
+      "role": "Nod 보병 해금",
+      "palette": "temperattd.pal",
+      "files": [
+        "hand.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "nuke",
+      "name": "Nuclear Power Plant",
+      "ko": "발전소",
+      "group": "structures",
+      "role": "전력 공급",
+      "palette": "temperattd.pal",
+      "files": [
+        "nuke.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "hq",
+      "name": "Comm. Center",
+      "ko": "통신 센터",
+      "group": "structures",
+      "role": "지원 기술 해금",
+      "palette": "temperattd.pal",
+      "files": [
+        "hq.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "orca",
+      "name": "Orca",
+      "ko": "오르카",
+      "group": "aircraft",
+      "role": "순환 공중 지원",
+      "palette": "temperattd.pal",
+      "files": [
+        "orca.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "a10",
+      "name": "Warthog",
+      "ko": "A-10 워트호그",
+      "group": "aircraft",
+      "role": "폭격 지원",
+      "palette": "temperattd.pal",
+      "files": [
+        "a10.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "mig",
+      "name": "MiG Attack Plane",
+      "ko": "미그",
+      "group": "aircraft",
+      "role": "고속 공중 지원",
+      "palette": "temperat.pal",
+      "files": [
+        "mig.shp"
+      ],
+      "defaultMode": "idle"
+    },
+    {
+      "id": "heli",
+      "name": "Longbow",
+      "ko": "롱보우",
+      "group": "aircraft",
+      "role": "헬기 화력 지원",
+      "palette": "temperat.pal",
+      "files": [
+        "heli.shp",
+        "lbrotor.shp"
+      ],
+      "defaultMode": "idle"
+    }
+  ],
+  "note": "Selected CAmod sprites, not Remastered HD. Some units are mod variants; this is not a full original C&C or RA2 roster. Sequences are extracted; engine team-color remaps, lighting, recoil and weapon/projectile effects are not reproduced. TD roles are design suggestions, not source statistics. Terrain is CAmod Jungle."
+}
