@@ -13,5 +13,5 @@ PY
   unzip -q .build-tools/gradle.zip -d .build-tools
   rm .build-tools/gradle.zip
 fi
-cp ../web/index.html app/src/main/assets/index.html
+python3 ../build.py
 bash .build-tools/gradle-8.11.1/bin/gradle --no-daemon assembleDebug

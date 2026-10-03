@@ -15,7 +15,8 @@ if (!(Test-Path $gradleExe)) {
     Expand-Archive $zipPath -DestinationPath $toolsDir -Force
     Remove-Item $zipPath
 }
-Copy-Item '..\web\index.html' 'app\src\main\assets\index.html' -Force
+python '..\build.py'
+if ($LASTEXITCODE -ne 0) { throw 'Game asset build failed.' }
 & $gradleExe --no-daemon assembleDebug
 if ($LASTEXITCODE -ne 0) { throw 'APK build failed. Check Java and Android SDK paths.' }
 Write-Host 'APK: app\build\outputs\apk\debug\app-debug.apk'

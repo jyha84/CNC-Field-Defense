@@ -64,3 +64,6 @@ for u in units:
   u['layers'][part]={'src':uri(sheet),'w':w,'h':h,'cols':8}
 data={'units':units,'terrain':uri(bg),'width':W,'height':H,'path':path,'obstacles':obstacles,'commit':atlas['commit']}
 (ROOT/'assets.json').write_text(json.dumps(data,ensure_ascii=False));print('Generated terrain and assets:',len(units),'units')
+
+from make_terrain import build_terrain_pack
+build_terrain_pack()

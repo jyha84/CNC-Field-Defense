@@ -45,3 +45,16 @@ CAmod의 저장소 라이선스는 신규 코드의 GPL 선택 참고 자료입�
 `upstream-notices/AUTHORS`는 CAmod/OpenRA의 원본 크레딧을 보존한 문서입니다. 이 문서에 나오는 모든 라이브러리가 현재 JavaScript 게임에 포함된다는 의미는 아닙니다.
 
 안드로이드 소스는 AndroidX WebKit 의존성을 선언합니다. 이 저장소에는 컴파일된 AndroidX 바이너리나 APK를 포함하지 않았습니다. Pillow/fontTools, Node.js와 Playwright는 개발·검증 도구이며 실행 HTML에 해당 라이브러리를 번들하지 않습니다.
+
+## 7. v0.3.0 개발본 추가 자료 (공개 배포 보류)
+
+- `terrain-pack.json`: 위 CAmod 리비전의 Jungle clear1/d03/p01~p04, 나무와 바위를 재사용 가능한 PNG 타일로 분리했습니다. 새 에셋 권한을 부여하는 변환이 아닙니다.
+- `audio-pack.json`: 같은 리비전의 `mods/ca/bits/audio/{mgun2,bazook1,tnkfire3,tnklaser,xplosml2,xplobig4}.aud`를 브라우저 재생용 MP3로 변환했습니다. 각각의 원본 경로·리비전·SHA-256이 JSON에 들어 있습니다. 효과음은 원본 권리자의 권리를 유지합니다.
+- 원작 음악 파일은 포함하지 않습니다. 사용자가 선택한 로컬 파일의 반복 재생 기능만 제공합니다.
+- `web/field-pixel.woff2`: [Galmuri](https://github.com/quiple/galmuri) 공식 npm 패키지 2.40.3의 Galmuri11을 UI 문자용으로 서브셋 처리하고 Field Pixel로 이름을 변경했습니다. 저작권: © 2019–2025 Lee Minseo. 라이선스: SIL OFL 1.1, [원문](upstream-notices/Galmuri-OFL.md). `subset_font.py`로 변환합니다. 원본 폰트 패키지는 이 저장소에 포함하지 않습니다.
+- 신규 효과음 및 폰트는 생성 HTML과 Android assets에도 함께 포함됩니다. Android의 중복 파일에 같은 조건이 적용됩니다.
+- [공개 배포 검토](PUBLICATION_REVIEW_KO.md)의 미확인 쟁점을 해결하기 전까지 이 개발본의 공개 배포를 보류합니다.
+
+### v0.3.1 Winter terrain
+
+CAmod 리비전 `b67e287461c4e1086a3ba46d8c0dcb1bb4dd6748`의 `mods/ca/bits/winter/clear1.win`, `d03.win`, `p01.win`~`p04.win`, `t01.win`~`t03.win`, `tc01.win`~`tc03.win`, `winter.pal`을 PNG로 변환·배치했습니다. 원본 및 변형 에셋 권리는 원권리자에게 유지됩니다. 상세 기술 검토: [TERRAIN_REVIEW_KO.md](docs/TERRAIN_REVIEW_KO.md).
