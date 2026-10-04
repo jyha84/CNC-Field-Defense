@@ -9,7 +9,7 @@ EA has not endorsed and does not support this product.
 
 ![v0.3.1 GitHub Pages 겨울 전장 실제 플레이 화면](docs/screenshots/winter-live-1791074300175.jpg)
 
-> 상태: **v0.3.1** · 랜덤 지형·효과음·로컬 BGM·픽셀 폰트 · 설치용 APK는 아직 빌드하지 않았습니다.
+> 상태: **v0.3.2** · 모바일 세로 잘림 수정 · 랜덤 지형·효과음·로컬 BGM·픽셀 폰트 · 설치용 APK는 아직 빌드하지 않았습니다.
 
 ## 실행
 
@@ -55,7 +55,9 @@ GitHub의 파일 보기 화면에서는 게임이 실행되지 않습니다.
 
 ### 모바일 화면
 
-<img src="docs/screenshots/woodland-mobile.png" alt="모바일 세로 화면" width="340">
+<img src="docs/screenshots/portrait-fixed-1791074903257.jpg" alt="v0.3.2 모바일 세로 잘림 수정 화면" width="340">
+
+v0.3.2는 헤더를 제목/버튼 두 줄로 분리하고 크레딧·내구도와 강화·철수 버튼 배치를 수정했습니다. 공개 Pages의 `tests/mobile-preview.html`에서 iframe 너비 320/360/390/412px 모두 가로 넘침, 헤더 밖 버튼, 주요 컨트롤 내부 잘림이 없음을 확인했습니다. 데스크톱 Chromium의 iframe 검사이며 실제 Android 기기 검증을 대신하지는 않습니다.
 
 세로 화면에서는 생산창이 전장 아래에 표시됩니다. 가로 화면에서는 우측에 표시되며, 화면 높이가 작으면 생산창 내부를 스크롤할 수 있습니다.
 
