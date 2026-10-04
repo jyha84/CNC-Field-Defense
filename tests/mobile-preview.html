@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Field Defense — Portrait layout check</title>
+<style>
+body{margin:0;padding:16px;background:#141c16;color:#d7dfc5;font:14px monospace}label,button{margin-right:12px}select,button{font:inherit;padding:6px}main{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;margin-top:16px}iframe{display:block;border:1px solid #829568;width:390px;height:844px;flex-shrink:0}pre{white-space:pre-wrap;max-width:450px;line-height:1.7}
+</style>
+<label for="size">화면 너비</label><select id="size"><option>320</option><option>360</option><option selected>390</option><option>412</option></select><button id="check">레이아웃 검사</button>
+<main><iframe id="phone" title="모바일 세로 게임 미리보기" src="../index.html?v=0.3.2"></iframe><pre id="result">게임 로딩 후 레이아웃 검사를 누르세요.</pre></main>
+<script>
+const phone=document.getElementById('phone'),size=document.getElementById('size'),result=document.getElementById('result');
+size.onchange=()=>{phone.style.width=size.value+'px';result.textContent='너비 '+size.value+'px 적용. 레이아웃 검사를 누르세요.'};
+document.getElementById('check').onclick=async()=>{
+ const d=phone.contentDocument;await d.fonts.ready;
+ const root=d.documentElement,header=d.querySelector('.topbar').getBoundingClientRect();
+ const overflow=[...d.querySelectorAll('.topactions button,.counter,.counter strong,.terrainrow,.unitactions button,.production,.musicbox')].filter(e=>e.scrollWidth>e.clientWidth+1).map(e=>e.id||e.className||e.textContent.trim());
+ const escaped=[...d.querySelectorAll('.topactions button')].filter(e=>{const b=e.getBoundingClientRect();return b.top<header.top-1||b.bottom>header.bottom+1||b.left<0||b.right>root.clientWidth+1});
+ const report={width:root.clientWidth,scrollWidth:root.scrollWidth,headerContainsButtons:escaped.length===0,clippedControls:overflow,pass:root.scrollWidth<=root.clientWidth+1&&!escaped.length&&!overflow.length};
+ result.textContent=JSON.stringify(report,null,2);
+};
+</script></html>

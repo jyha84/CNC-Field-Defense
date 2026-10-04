@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 (async()=>{
- const base=new URL('.',document.currentScript.src),version='?v=0.3.1';
+ const base=new URL('.',document.currentScript.src),version='?v=0.3.2';
  try{
   const packs=await Promise.all(['assets','terrain-pack','audio-pack'].map(async name=>{const response=await fetch(new URL('../'+name+'.json'+version,base));if(!response.ok)throw new Error('자료 응답 오류');return response.json()}));
   [window.ASSETS,window.TERRAIN,window.AUDIO]=packs;

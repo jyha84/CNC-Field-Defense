@@ -25,6 +25,37 @@ button{background-image:linear-gradient(#526044ab,#23301abf),var(--woodland);bac
 
 .musicbox{border:1px inset #6d7659;background:#162317;padding:8px;font-size:10px}.musicbox .musicrow{display:flex;gap:5px;align-items:center;margin-top:5px}.musicbox button{font-size:10px;padding:4px 7px;min-height:28px}.musicbox input[type=range]{width:100%;min-width:0;accent-color:#adc575}.musicbox p{margin:5px 0 0;color:#b6c2a0;overflow-wrap:anywhere}body{font-size:12px;font-synthesis:none}.brand h1{font-size:24px;line-height:1;letter-spacing:0}.insignia{font-family:"Field Pixel",monospace;font-size:24px;font-weight:400}.counter strong{font-size:24px;line-height:1.25}.buildcard .caption{font-size:12px}.buildcard .typehint{font-size:10px;white-space:normal;min-height:27px}.unitinfo h2{font-size:16px}.wavebutton{font-size:12px}.mapbadge{letter-spacing:0;font-size:10px}.musicbox button{font-size:12px}.howto,.modalbox>p{font-size:12px;line-height:1.8}@media(max-width:600px){.brand h1{font-size:18px}.topactions{flex-wrap:wrap}.topactions button{font-size:12px}.counter strong{font-size:24px}.unitinfo h2{font-size:14px}}
 .terrainbox{padding:12px;border-bottom:1px solid #71825b55;background:#17201566}.terrainrow{display:flex;gap:6px;margin-top:7px}.terrainrow select{min-width:0;flex:1;border:1px solid #7c8962;background:#1c251b;color:#e6e7cc;padding:7px;font:inherit}.terrainrow button{flex:1;font-size:11px}.terrainbox p{font-size:10px;color:#b5c49b;margin:7px 0 0;line-height:1.6}@media(max-width:600px) and (orientation:portrait){.terrainbox{grid-column:1/-1;grid-row:3}}
+/* Portrait layout: content-sized header and bounded grid tracks, not overflow masking. */
+@media(max-width:600px) and (orientation:portrait){
+ .app{width:100%;height:auto;max-height:none;min-width:0}
+ .topbar{height:auto;min-height:0;display:grid;grid-template-columns:minmax(0,1fr);gap:8px;padding:10px;flex-shrink:0}
+ .brand,.brand>div{min-width:0}.brand h1{font-size:22px;white-space:nowrap}
+ .topactions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;min-width:0;gap:5px}
+ .topactions button{min-width:0;min-height:38px;padding:7px 2px;font-size:12px;white-space:nowrap}
+ .shell,.battle,.sidebar,.unitinfo,.counter{min-width:0}
+ .missionstrip{flex-wrap:wrap;padding:7px 10px;gap:3px 8px}
+ .missionstrip>span{min-width:0;overflow-wrap:anywhere}
+ .maparea{flex:0 0 auto;width:100%;min-height:0}.mapframe{max-height:none}
+ .statusbar{align-items:flex-start}.statusbar #message{min-width:0;overflow-wrap:anywhere}
+ .controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:5px}
+ .controls button{min-width:0;padding:5px 2px}
+ .unitpanel{grid-template-columns:48px minmax(0,1fr);gap:8px;min-height:0}
+ .unitinfo p,.stats{overflow-wrap:anywhere}
+ .unitactions{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));min-width:0}
+ .unitactions button{min-width:0;min-height:36px;padding:6px 4px}
+ .sidebar{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:9px}
+ .sidebar>*{min-width:0}.radarblock{grid-column:1;grid-row:1}
+ .radarblock .sectionlabel{flex-wrap:wrap;gap:3px;letter-spacing:0}
+ .economy{grid-column:2;grid-row:1;grid-template-columns:minmax(0,1fr);gap:5px}
+ .counter{padding:5px 7px}.counter label{font-size:9px;letter-spacing:0;overflow-wrap:anywhere}
+ .counter strong{font-size:clamp(18px,6vw,24px);line-height:1.2}
+ .powerblock{grid-column:1/-1;grid-row:2}.terrainbox{grid-column:1/-1;grid-row:3;padding:9px}
+ .wavebox,.productiontabs,.production,.support,.musicbox,.log{grid-column:1/-1}
+ .production{grid-template-columns:repeat(3,minmax(0,1fr))}.buildcard{min-width:0}
+ .terrainrow>*{min-width:0}.terrainrow button{white-space:nowrap}
+ .bottom{flex-wrap:wrap;align-items:center}.bottom>span:first-child{flex-basis:100%}
+}
+@media(max-width:359px) and (orientation:portrait){.production{grid-template-columns:repeat(2,minmax(0,1fr))}.topactions button{font-size:11px}}
 </style></head><body><div id="loading" class="loading"><div>GDI FIELD COMMAND<br><br>지형과 유닛 데이터 불러오는 중…</div></div>
 <div class="app"><div style="padding:4px 10px;background:#101810;color:#bbc4a8;font-size:10px">EA has not endorsed and does not support this product.</div><header class="topbar"><div class="brand"><div class="insignia">GDI</div><div><h1>FIELD DEFENSE</h1><p>COMBINED ARMS · FIELD OPERATIONS</p></div></div><div class="operation">OPERATION 01 / HOLD THE LINE</div><div class="topactions"><button id="atlasBtn">도감 32</button><button id="helpBtn">작전 안내</button><button id="soundBtn" aria-pressed="false">음향 OFF</button><button id="fullBtn" aria-label="전체 화면">전체</button></div></header><div class="rotate">가로 화면에서 전장과 생산창을 함께 보기 좋습니다.</div>
 <div class="shell"><main class="battle"><div class="missionstrip"><span><span class="dot">●</span>GDI 전진기지 · 방어 작전</span><span id="missionState">배치 대기 / 적 진입 방향 →</span></div><div class="maparea"><div class="mapframe"><canvas id="field" tabindex="0" width="1536" height="960" aria-label="방어 전장. 유닛을 고른 다음 잔디를 눌러 배치합니다."></canvas><div class="mapbadge"><span id="sectorId">SECTOR</span><br><span id="terrainBadge">JUNGLE OUTPOST</span></div><div class="maphelp"><span id="mapHint">우측 유닛 선택 → 잔디를 눌러 배치</span><button id="cancelBuild" hidden>배치 취소 ✕</button></div><div id="announce" class="announce" hidden><h2 id="announceTitle"></h2><p id="announceText"></p><button id="announceAction"></button><button id="reviewBtn" hidden>전장 보기</button></div></div></div><div class="statusbar"><span id="message" role="status" aria-live="polite">사령관님, 기지가 준비되었습니다.</span><div class="controls"><button id="gridBtn" aria-pressed="false">배치 격자</button><button id="speedBtn">속도 1×</button><button id="pauseBtn">일시정지</button></div></div><section class="unitpanel"><div class="portrait"><img id="selectedPortrait" alt="선택한 유닛"></div><div class="unitinfo"><h2 id="selectedTitle">사령부</h2><p id="selectedDesc">유닛을 배치하고 12차 웨이브를 방어하세요.</p><div id="selectedStats" class="stats"></div></div><div class="unitactions"><button id="upgradeBtn" disabled>유닛을 선택하세요</button><button id="sellBtn" disabled>철수 / 70% 회수</button></div></section></main>
